@@ -1,164 +1,424 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>CV - Mohamed Yahya YAHYA</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Portfolio - Mohamed Yahya YAHYA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
+    :root {
+      --primary: #0f4c5c;
+      --secondary: #1b4965;
+      --accent: #2a9d8f;
+      --light: #f4f7fb;
+      --dark: #1f2933;
+      --text: #333333;
+      --muted: #666666;
+      --card: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #eef1f5;
-      color: #333;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
     }
 
     .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 40px;
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      max-width: 1050px;
+      margin: 35px auto;
+      padding: 35px;
+      background: var(--card);
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    }
+
+    header {
       text-align: center;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--border);
     }
 
     h1 {
-      color: #1a5d1a;
-      margin-bottom: 10px;
-      font-size: 32px;
+      margin: 0;
+      font-size: 36px;
+      color: var(--primary);
+      letter-spacing: 0.5px;
     }
 
-    p {
-      margin: 5px 0 20px 0;
-      font-size: 16px;
+    .subtitle {
+      margin-top: 10px;
+      font-size: 18px;
+      color: var(--dark);
+      font-weight: 500;
     }
 
-    h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #1a5d1a;
-      padding-bottom: 5px;
-      margin-top: 40px;
-      text-align: left;
-    }
-
-    .section {
-      margin-bottom: 30px;
-      text-align: left;
+    .contact {
+      margin-top: 12px;
+      font-size: 15px;
+      color: var(--muted);
     }
 
     a {
-      color: #007BFF;
+      color: var(--secondary);
       text-decoration: none;
+      font-weight: 500;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
+    h2 {
+      color: var(--primary);
+      margin-top: 35px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent);
+      font-size: 24px;
+    }
+
+    h3 {
+      color: var(--secondary);
+      margin-bottom: 6px;
+      font-size: 19px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .about {
+      background: #f8fafc;
+      border-left: 5px solid var(--accent);
+      padding: 18px 22px;
+      border-radius: 8px;
+      margin-top: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
     ul {
       padding-left: 20px;
-      text-align: left;
+      margin-top: 8px;
     }
 
     li {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    strong {
-      color: #000;
+    .tag {
+      display: inline-block;
+      background: #e8f6f3;
+      color: var(--primary);
+      padding: 5px 9px;
+      border-radius: 20px;
+      margin: 4px 4px 4px 0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .project {
+      margin-bottom: 22px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #ffffff;
+    }
+
+    .project-title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .year {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .container {
+        box-shadow: none;
+        margin: 0;
+        max-width: 100%;
+        border-radius: 0;
+      }
+
+      a {
+        color: #000;
+      }
     }
   </style>
 </head>
+
 <body>
-
   <div class="container">
-    <h1>Mohamed Yahya YAHYA</h1>
-    <p>Nouakchott, Mauritanie | <a href="mailto:23084@esp.mr">23084@esp.mr</a> | +222 32111201</p>
 
-    <div class="section">
+    <header>
+      <h1>Mohamed Yahya YAHYA</h1>
+      <div class="subtitle">
+        Data Science | Data Engineering | Intelligence Artificielle | Développement Full-Stack
+      </div>
+      <div class="contact">
+        Rabat, Maroc |
+        <a href="mailto:myhyyahya@gmail.com">myhyyahya@gmail.com</a> |
+        <a href="https://github.com/yahyaamed84" target="_blank">GitHub</a> |
+        <a href="https://yahyaamed84.github.io" target="_blank">Portfolio</a>
+      </div>
+    </header>
+
+    <section class="section about">
       <h2>À propos</h2>
-      <p><em>
-        En tant qu’ingénieur statisticien passionné par l’analyse et la modélisation des données, je mets mes compétences en informatique,
-        intelligence artificielle, statistiques et mathématiques au service de projets complets, de la collecte des données jusqu’à leur analyse
-        et visualisation. Je suis actuellement à la recherche de nouvelles opportunités de projets.
-      </em></p>
-    </div>
+      <p>
+        Ingénieur statisticien de formation, actuellement élève ingénieur en
+        <strong>Statistique, Économie Appliquée et Big Data à l’INSEA de Rabat</strong>,
+        je m’intéresse à la data science, à l’ingénierie des données, à l’intelligence
+        artificielle et au développement d’applications orientées données.
+      </p>
+      <p>
+        Je conçois des solutions allant de la collecte et du traitement des données
+        jusqu’à leur modélisation, visualisation et déploiement. Mon objectif est de
+        transformer des données brutes en informations utiles pour répondre à des enjeux
+        économiques, stratégiques et techniques.
+      </p>
+    </section>
 
-    <div class="section">
+    <section class="section">
       <h2>Formation</h2>
       <ul>
-        <li><strong>École Supérieure Polytechnique</strong> – Élève ingénieur en Statistiques & Ingénierie de Données (2023 – présent)</li>
-        <li><strong>IPGEI</strong> – Classes préparatoires aux grandes écoles, filière MPSI – MP (2020 – 2023)</li>
-        <li><strong>Lycée El Khiyar</strong> – Baccalauréat en Sciences Mathématiques (2020)</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Expériences professionnelles</h2>
-      <ul>
         <li>
-          <strong>Stage ouvrier – Agence Nationale de Recherches Géologiques et du Patrimoine Minier</strong> (août 2024 – septembre 2024)
-          <ul>
-            <li>Optimisation du traitement des données géologiques avec automatisation des pipelines</li>
-            <li>Réduction du temps de génération de rapports de 80%</li>
-            <li>Amélioration de la qualité et de la conformité des données</li>
-            <li>Réduction des incohérences dans les données géochimiques et minières</li>
-          </ul>
+          <strong>INSEA, Rabat</strong> — Élève ingénieur en Statistique, Économie Appliquée et Big Data
+          <span class="year">(2025 – présent)</span>
+        </li>
+        <li>
+          <strong>École Supérieure Polytechnique</strong> — Statistiques & Ingénierie de Données
+          <span class="year">(2023 – 2025)</span>
+        </li>
+        <li>
+          <strong>IPGEI</strong> — Classes préparatoires aux écoles d’ingénieurs, filière MPSI – MP
+          <span class="year">(2020 – 2023)</span>
+        </li>
+        <li>
+          <strong>Lycée El Khiyar</strong> — Baccalauréat en Sciences Mathématiques
+          <span class="year">(2020)</span>
         </li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>Compétences</h2>
+    <section class="section">
+      <h2>Expérience professionnelle</h2>
+
+      <div class="card">
+        <h3>Stage ouvrier — ANARPAM, Nouakchott</h3>
+        <p class="year">Août – Septembre 2024</p>
+        <ul>
+          <li>
+            Analyse de données géochimiques pour détecter des anomalies et améliorer les
+            systèmes de traitement des données géoscientifiques.
+          </li>
+          <li>
+            Utilisation de méthodes statistiques telles que l’ACP et le clustering pour
+            explorer, structurer et interpréter les données.
+          </li>
+          <li>
+            Transformation de données brutes en informations exploitables pour appuyer
+            l’analyse et la prise de décision.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Compétences techniques</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Langages & programmation</h3>
+          <span class="tag">Python</span>
+          <span class="tag">Scala</span>
+          <span class="tag">VBA</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+        </div>
+
+        <div class="card">
+          <h3>Frameworks & outils</h3>
+          <span class="tag">Django</span>
+          <span class="tag">Django REST</span>
+          <span class="tag">Flask</span>
+          <span class="tag">React.js</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Chart.js</span>
+        </div>
+
+        <div class="card">
+          <h3>Data, IA & Machine Learning</h3>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">NLP</span>
+          <span class="tag">RAG</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">YOLOv8</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Keras</span>
+        </div>
+
+        <div class="card">
+          <h3>Bases de données & Cloud</h3>
+          <span class="tag">MySQL</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">Google Cloud Platform</span>
+          <span class="tag">Microsoft Azure</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Projets académiques et appliqués</h2>
+
+      <div class="project">
+        <div class="project-title">
+          <h3>SmartMK — Plateforme intelligente d’analyse marketing</h3>
+          <span class="year">2026</span>
+        </div>
+        <p>
+          Plateforme d’analytics marketing assistée par intelligence artificielle,
+          intégrant des tableaux de bord KPI, l’analyse des avis clients, la génération
+          de rapports et un copilote IA multilingue.
+        </p>
+        <ul>
+          <li>Authentification JWT et architecture full-stack.</li>
+          <li>Visualisation des indicateurs marketing et analyse orientée décision.</li>
+          <li><strong>Technologies :</strong> Next.js, React, Tailwind CSS, Django REST, PostgreSQL, Docker, Groq API.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-title">
+          <h3>TrafficAI — Détection intelligente du trafic routier</h3>
+          <span class="year">2025</span>
+        </div>
+        <p>
+          Système d’analyse vidéo en temps réel pour la détection de véhicules,
+          l’identification des événements routiers et la visualisation des indicateurs
+          de trafic.
+        </p>
+        <ul>
+          <li>Analyse via webcam ou vidéo importée.</li>
+          <li>Détection d’accidents, suivi du trafic et tableau de bord statistique.</li>
+          <li>Carte interactive, historique des analyses et indicateurs visuels.</li>
+          <li><strong>Technologies :</strong> YOLOv8, Django, OpenCV, MySQL, Docker.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-title">
+          <h3>Legal Mauritanie — Système de recherche juridique intelligent</h3>
+          <span class="year">2025</span>
+        </div>
+        <p>
+          Application web permettant l’exploration de la Gazette Officielle mauritanienne
+          de 2015 à 2024, avec intégration d’un moteur de recherche juridique intelligent.
+        </p>
+        <ul>
+          <li>Moteur RAG combinant Gemini Pro et un modèle GGUF local.</li>
+          <li>Indexation et recherche sémantique dans des documents juridiques.</li>
+          <li><strong>Technologies :</strong> Django, Gemini API, LlamaIndex, LangChain, GGUF LLM, FAISS, SQLite, Bootstrap.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-title">
+          <h3>INPC — Indice National des Prix à la Consommation</h3>
+          <span class="year">2024</span>
+        </div>
+        <p>
+          Création d’un site web interactif pour le suivi, l’analyse et la visualisation
+          des prix à la consommation.
+        </p>
+        <ul>
+          <li>Traitement et structuration des données de prix.</li>
+          <li>Interface web pour l’exploration des indicateurs.</li>
+          <li><strong>Technologies :</strong> Django, MT5 Transformers, Colab, Docker, GitHub.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Certificats</h2>
       <ul>
-        <li><strong>Langages :</strong> Python, Scala, VBA, JavaScript, HTML/CSS</li>
-        <li><strong>Frameworks et outils :</strong> Docker, Django, Flask, MongoDB, Streamlit, TensorFlow, Keras, Power BI</li>
-        <li><strong>Bases de données & cloud :</strong> SQL, MySQL, Google Cloud, Microsoft Azure</li>
-        <li><strong>Soft skills :</strong> Leadership, travail d’équipe</li>
+        <li><strong>Fundamentals of Deep Learning</strong> — NVIDIA</li>
+        <li><strong>Evaluation and Light Customization of LLMs</strong> — NVIDIA</li>
+        <li><strong>Data Science et Machine Learning</strong> — MasterClass Python, Udemy</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section">
       <h2>Langues</h2>
       <ul>
-        <li>Arabe : locuteur natif</li>
-        <li>Français : avancé (DELF B2 : 61/100)</li>
-        <li>Anglais : intermédiaire (TrackTest CEFR B1 : 81/100)</li>
+        <li><strong>Arabe :</strong> locuteur natif</li>
+        <li><strong>Français :</strong> DELF B2</li>
+        <li><strong>Anglais :</strong> Tracktest CEFR B1</li>
       </ul>
+    </section>
+
+    <section class="section">
+      <h2>Liens utiles</h2>
+      <ul>
+        <li><strong>GitHub :</strong> <a href="https://github.com/yahyaamed84" target="_blank">github.com/yahyaamed84</a></li>
+        <li><strong>Portfolio :</strong> <a href="https://yahyaamed84.github.io" target="_blank">yahyaamed84.github.io</a></li>
+        <li><strong>Email :</strong> <a href="mailto:myhyyahya@gmail.com">myhyyahya@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <div class="footer">
+      © 2026 Mohamed Yahya YAHYA — Portfolio Data Science, IA & Data Engineering
     </div>
 
-    <div class="section">
-      <h2>Projets académiques</h2>
-      <ul>
-        <li>
-          <strong>Détection d’embouteillages par IA (2025)</strong>
-          <ul>
-            <li>Système d’analyse d’images en temps réel avec YOLOv8</li>
-            <li>Intégration avec Django et visualisation de données</li>
-            <li>Technologies : YOLOv8, Django, MySQL, Docker</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Projet avancé : Indice National des Prix à la Consommation (INPC) – 2024</strong>
-          <ul>
-            <li>Suivi interactif des prix à la consommation</li>
-            <li>Utilisation de Transformers (MT5) pour l’analyse des tendances</li>
-            <li>Déploiement via Google Colab</li>
-            <li>Technologies : Django, Transformers, Colab, Docker, GitHub</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Certificats & Centres d’intérêt</h2>
-      <ul>
-        <li>Data Science et Machine Learning | MasterClass Python (Udemy) : Formation approfondie en analyse de données, modélisation statistique et apprentissage automatique avec Python.</li>
-        <li>ESP DATA CLUB : Participation active aux événements du club et conférences en data science.</li>
-      </ul>
-    </div>
   </div>
-
 </body>
 </html>
